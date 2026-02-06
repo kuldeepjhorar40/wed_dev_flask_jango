@@ -4,3 +4,4 @@ class Config:
     MYSQL_USER = "root"
     MYSQL_PASSWORD = "mYSQLGO40!!A.)"
     MYSQL_PORT = "3306"
+    MYSQL_DATABASE = "flask_auth"
