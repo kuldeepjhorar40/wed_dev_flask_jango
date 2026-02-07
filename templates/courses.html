@@ -1,0 +1,19 @@
+<h2>Courses</h2>
+
+<table border="1">
+<tr>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Duration</th>
+</tr>
+
+{% for c in courses %}
+<tr>
+    <td>{{ c[1] }}</td>
+    <td>{{ c[2] }}</td>
+    <td>{{ c[3] }}</td>
+</tr>
+{% endfor %}
+</table>
+
+<a href="/dashboard">Back</a>
