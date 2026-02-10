@@ -6,41 +6,76 @@
 </head>
 <body>
 
-<div class="box">
+<div class="layout">
 
-<h2>Welcome {{user}}</h2>
+<!---------------- SIDEBAR ---------------->
+<div class="sidebar">
 
-<p>You are logged in.</p>
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Dashboard</title>
-</head>
-<body>
+<h2>LMS</h2>
+
+<a href="/dashboard"> Dashboard</a>
+<a href="/profile"> Profile</a>
+<a href="/help">Help</a>
+<a href="/logout">🚪 Logout</a>
+
+</div>
+
+
+<!---------------- MAIN ---------------->
+<div class="main">
 
 <h2>Welcome, {{ name }}</h2>
 
-<nav>
-    <a href="/dashboard">Dashboard</a> |
-    <a href="/profile">Profile</a> |
-    <a href="/courses">Courses</a> |
-    <a href="/help">Help</a> |
-    <a href="/logout">Logout</a>
-</nav>
 
-<hr>
+<!------ STATS ------>
+<div class="stats">
 
-<h3>Main Dashboard</h3>
+<div class="card">
+<h3>{{ courses|length }}</h3>
+<p>Courses</p>
+</div>
 
-<p>Select any option from menu.</p>
+<div class="card">
+<h3>5h 30m</h3>
+<p>Learning Time</p>
+</div>
 
-</body>
-</html>
+<div class="card">
+<h3>3</h3>
+<p>Badges</p>
+</div>
 
-<a href="/logout">
-<button>Logout</button>
-</a>
+<div class="card">
+<h3>850</h3>
+<p>Points</p>
+</div>
 
+</div>
+
+
+<!------ COURSES ------>
+<h3>My Courses</h3>
+
+<div class="courses">
+
+{% for c in courses %}
+
+<div class="course">
+
+<h4>{{ c.title }}</h4>
+
+<p>{{ c.description }}</p>
+
+<span class="status">Completed</span>
+
+</div>
+
+{% endfor %}
+
+</div>
+
+
+</div>
 </div>
 
 </body>

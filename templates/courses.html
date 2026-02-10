@@ -1,19 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Courses</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="box">
+
 <h2>Courses</h2>
 
-<table border="1">
+<table border="1" width="100%">
+
 <tr>
-    <th>Title</th>
-    <th>Description</th>
+    <th>ID</th>
+    <th>Name</th>
     <th>Duration</th>
 </tr>
 
 {% for c in courses %}
 <tr>
+    <td>{{ c[0] }}</td>
     <td>{{ c[1] }}</td>
     <td>{{ c[2] }}</td>
-    <td>{{ c[3] }}</td>
 </tr>
 {% endfor %}
+
 </table>
 
+<br>
+
 <a href="/dashboard">Back</a>
+
+</div>
+
+</body>
+</html>

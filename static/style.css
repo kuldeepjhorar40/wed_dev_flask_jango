@@ -1,67 +1,121 @@
 body{
-    background: linear-gradient(135deg,#1e3c72,#2a5298);
-    font-family: Arial;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+    margin:0;
+    background:#121212;
+    font-family:Arial;
+    color:white;
 }
+
+
+/* LOGIN / REGISTER BOX */
 
 .box{
-    background:white;
-    width:320px;
+    width:350px;
+    background:#1e1e1e;
+    margin:120px auto;
     padding:30px;
-    border-radius:10px;
     text-align:center;
-    box-shadow:0 0 15px black;
+    border-radius:10px;
 }
 
-input{
-    width:100%;
+.box input{
+    width:90%;
     padding:10px;
-    margin:10px 0;
-}
-
-button{
-    width:100%;
-    padding:10px;
-    background:#2a5298;
-    color:white;
+    margin:10px;
+    background:#333;
     border:none;
+    color:white;
+}
+
+.box button{
+    width:95%;
+    padding:10px;
+    background:#00e5ff;
+    border:none;
+    font-size:16px;
     cursor:pointer;
-}
-
-button:hover{
-    background:#1e3c72;
-}
-
-a{
-    text-decoration:none;
-    color:#2a5298;
 }
 
 .error{
     color:red;
 }
-body {
-    font-family: Arial;
-    background: #f4f4f4;
+
+
+/* DASHBOARD */
+
+.layout{
+    display:flex;
 }
 
-.box {
-    width: 300px;
-    margin: 100px auto;
-    background: white;
-    padding: 20px;
-    text-align: center;
+
+/* SIDEBAR */
+
+.sidebar{
+    width:200px;
+    background:#1c1c1c;
+    height:100vh;
+    padding:20px;
 }
 
-input {
-    width: 90%;
-    padding: 8px;
-    margin: 10px;
+.sidebar h2{
+    text-align:center;
 }
 
-button {
-    padding: 8px 20px;
+.sidebar a{
+    display:block;
+    color:white;
+    text-decoration:none;
+    padding:12px;
+    margin:10px 0;
+    background:#333;
+    border-radius:5px;
+}
+
+.sidebar a:hover{
+    background:#00e5ff;
+    color:black;
+}
+
+
+/* MAIN */
+
+.main{
+    flex:1;
+    padding:30px;
+}
+
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+    margin:20px 0;
+}
+
+.card{
+    background:#1f1f1f;
+    padding:20px;
+    text-align:center;
+    border-radius:8px;
+}
+
+
+/* COURSES */
+
+.courses{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.course{
+    background:#222;
+    padding:20px;
+    border-radius:8px;
+}
+
+.status{
+    color:#00e5ff;
+    font-size:14px;
 }

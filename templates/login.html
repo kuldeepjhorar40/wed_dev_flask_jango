@@ -1,40 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <title>Login</title>
     <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
 
 <div class="box">
-    <h2>Login</h2>
 
-    <form method="POST" action="/login">
-        <input 
-            type="email" 
-            name="email" 
-            placeholder="Email" 
-            required
-        >
+<h2>Login</h2>
 
-        <input 
-            type="password" 
-            name="password" 
-            placeholder="Password" 
-            required
-        >
+<form method="POST">
 
-        <button type="submit">Login</button>
+<input type="email" name="email" placeholder="Email" required>
 
-        {% if error %}
-            <p class="error">{{ error }}</p>
-        {% endif %}
-    </form>
+<input type="password" name="password" placeholder="Password" required>
 
-    <p>
-        <a href="/register">Create Account</a>
-    </p>
+<button>Login</button>
+
+{% if error %}
+<p class="error">{{ error }}</p>
+{% endif %}
+
+</form>
+
+<p>
+<a href="/register">Create Account</a>
+</p>
+
 </div>
 
 </body>
